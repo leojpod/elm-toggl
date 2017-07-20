@@ -22,10 +22,10 @@ import Update
 
 {-| kick off the application
 -}
-main : Program Never Model.Model Update.Msg
+main : Program Never Model.State Update.Msg
 main =
     Html.program
-        ({ init = ( Model.init, Cmd.none )
+        ({ init = ( Model.initialState, Cmd.none )
          , update = Update.update
          , subscriptions = (\_ -> Sub.none)
          , view = View.view

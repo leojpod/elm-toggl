@@ -1,6 +1,6 @@
 module Update exposing (update, Msg(..))
 
-import Model exposing (Model)
+import Model exposing (State)
 
 
 {-
@@ -14,6 +14,11 @@ type Msg
     | DeviceReady
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> State -> ( State, Cmd Msg )
 update message model =
-    ( model, Cmd.none )
+    case message of
+        DeviceReady ->
+            ( Model.Ready Model.init, Cmd.none )
+
+        NoOp ->
+            ( model, Cmd.none )

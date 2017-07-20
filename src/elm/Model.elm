@@ -1,4 +1,4 @@
-module Model exposing (Model, init)
+module Model exposing (Model, State(Loading, Ready), initialState, init)
 
 {-
    Inside Model.elm, we contain the actual model for the view state of our program.
@@ -14,8 +14,18 @@ module Model exposing (Model, init)
 -}
 
 
+type State
+    = Loading
+    | Ready Model
+
+
 type alias Model =
     {}
+
+
+initialState : State
+initialState =
+    Loading
 
 
 init : Model
