@@ -56,15 +56,15 @@ let commonConfig = {
 if (isDev === true) {
   module.exports = merge(commonConfig, {
     entry: [
-      'webpack-dev-server/client?http://localhost:8080',
+    //   'webpack-dev-server/client?http://localhost:8080',
       entryPath
     ],
-    devServer: {
-      // serve index.html in place of 404 responses
-      historyApiFallback: true,
-      contentBase: './src',
-      hot: true
-    },
+    // devServer: {
+    //   // serve index.html in place of 404 responses
+    //   historyApiFallback: true,
+    //   contentBase: './src',
+    //   hot: true
+    // },
     module: {
       rules: [{
         test: /\.elm$/,

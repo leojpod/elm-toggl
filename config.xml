@@ -15,7 +15,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <hook src="elm-make.sh" type="before_prepare" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
