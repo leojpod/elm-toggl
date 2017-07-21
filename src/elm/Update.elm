@@ -11,13 +11,13 @@ import Model exposing (State)
 
 type Msg
     = NoOp
-    | DeviceReady
+    | DeviceReady ()
 
 
 update : Msg -> State -> ( State, Cmd Msg )
 update message model =
     case message of
-        DeviceReady ->
+        DeviceReady _ ->
             ( Model.Ready Model.init, Cmd.none )
 
         NoOp ->

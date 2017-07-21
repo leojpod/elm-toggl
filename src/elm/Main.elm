@@ -9,6 +9,7 @@ import Html
 import Model
 import View
 import Update
+import Ports
 
 
 -- local imports
@@ -27,7 +28,7 @@ main =
     Html.program
         ({ init = ( Model.initialState, Cmd.none )
          , update = Update.update
-         , subscriptions = (\_ -> Sub.none)
+         , subscriptions = (\_ -> Ports.deviceReady Update.DeviceReady)
          , view = View.view
          }
         )
