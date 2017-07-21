@@ -13,6 +13,7 @@
     "license": "Apache-2.0",
     "dependencies": {
         "autoprefixer": "^7.1.2",
+        "bulma": "^0.4.3",
         "copy-webpack-plugin": "^4.0.1",
         "cordova-browser": "^4.1.0",
         "cordova-plugin-browsersync": "^0.1.6",
